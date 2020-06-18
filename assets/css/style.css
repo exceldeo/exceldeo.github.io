@@ -1,0 +1,121 @@
+* {
+    font-family: sans-serif;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/image/TransCendenceFullTeamEdited.jpg");
+
+    /* Set a specific height */
+    height: 100vh;
+    max-height: 420px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+}
+
+.parallax-small {
+    /* The image used */
+    background-image: url("/assets/image/lg-lean-to-code-to-be-a-mobile-developer.jpg");
+
+    /* Set a specific height */
+    height: 100vh;
+    max-height: 200px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+}
+
+.image {
+    max-width: 20vh;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.card {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.jumbotron {
+    color: inherit;
+    background-color: #eee;
+
+}
+
+.jumbotron .container {}
+
+.container-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.item {
+    height: 200px;
+}
+
+.grid-item {
+    padding: 40px;
+    /* border: 3px solid black; */
+}
+
+.header-item {
+    /* border: 1px solid blue; */
+    position: relative;
+    margin: auto;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.body-item {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.color-5 {
+    color: #fffcf6;
+}
+
+.bg-color-1 {
+    background-color: #178fd6;
+    width: 50%;
+}
+
+.title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 18pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
