@@ -95,7 +95,9 @@
     position: relative;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px
+    padding-left: 15px;
+    padding-top: 10px;
+
 }
 
 .color-5 {
