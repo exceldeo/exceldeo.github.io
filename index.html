@@ -35,7 +35,6 @@
 				them and use a select to change the input device.</p> -->
 
 			<!-- <div> -->
-			<!-- <a class="button" id="startButton">Start</a> -->
 			<!-- <a class="button" id="resetButton">Reset</a> -->
 			<!-- </div> -->
 
@@ -47,6 +46,7 @@
 				<label for="sourceSelect">Change video source:</label>
 				<select id="sourceSelect" style="max-width:400px">
 				</select>
+				<a class="button" id="startButton">Change</a>
 			</div>
 
 			<label>Result:</label>
@@ -92,7 +92,6 @@
 						sourceSelectPanel.style.display = 'block'
 					}
 
-
 					codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
 						if (result) {
 							console.log(result)
@@ -105,6 +104,19 @@
 					})
 					console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
 
+					document.getElementById('startButton').addEventListener('click', () => {
+						codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+							if (result) {
+								console.log(result)
+								document.getElementById('result').textContent = result.text
+							}
+							if (err && !(err instanceof ZXing.NotFoundException)) {
+								console.error(err)
+								document.getElementById('result').textContent = err
+							}
+						})
+						console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+					})
 
 					document.getElementById('resetButton').addEventListener('click', () => {
 						codeReader.reset()
