@@ -1,4 +1,4 @@
-  const TypeWriter = function (txtElement, words, wait = 100) {
+  const TypeWriter = function (txtElement, words, wait) {
       this.txtElement = txtElement;
       this.words = words;
       this.txt = '';
@@ -42,7 +42,7 @@
   function init() {
       const txtElement = document.querySelector('.txt-type');
       const words = JSON.parse(txtElement.getAttribute('data-words'));
-      const wait = txtElement.getAttribute('data-wait');
+      const wait = 100;
 
       new TypeWriter(txtElement, words, wait);
   }
