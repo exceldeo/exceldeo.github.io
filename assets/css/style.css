@@ -1,121 +1,30 @@
-* {
-    font-family: sans-serif;
-}
-
-.parallax {
-    /* The image used */
-    background-image: url("/assets/image/TransCendenceFullTeamEdited.jpg");
-
-    /* Set a specific height */
-    height: 100vh;
-    max-height: 420px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
-    padding-top: 30px;
-
-}
-
-.parallax-small {
-    /* The image used */
-    background-image: url("/assets/image/lg-lean-to-code-to-be-a-mobile-developer.jpg");
-
-    /* Set a specific height */
-    height: 100vh;
-    max-height: 200px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
-    padding-top: 30px;
-
-}
-
-.image {
-    max-width: 20vh;
-    margin: auto;
+.nav-link:hover {
     display: block;
-    border-radius: 50%;
-}
-
-.card {
-    margin: auto;
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
+    border-bottom: 3px solid #0B3DC0;
+    padding: 1px;
 }
 
 .jumbotron {
-    color: inherit;
-    background-color: #eee;
-
+    background-color: cornflowerblue;
+    background-size: cover;
+    height: 470px;
+    background-image: url("/assets/img/bb.jpeg");
 }
 
-.jumbotron .container {}
-
-.container-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+.jumbotron .display-5 {
+    color: white;
+    margin-top: 80px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 6);
+    font-size: 80px;
 }
 
-.item {
-    height: 200px;
+.main {
+    margin-top: -100px;
+    background-color: white;
+    padding: 10px;
 }
 
-.grid-item {
-    padding: 40px;
-    /* border: 3px solid black; */
-}
-
-.header-item {
-    /* border: 1px solid blue; */
-    position: relative;
-    margin: auto;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.body-item {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
-
-.color-5 {
-    color: #fffcf6;
-}
-
-.bg-color-1 {
-    background-color: #178fd6;
-    width: 50%;
-}
-
-.title {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    font-size: 18pt;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
+body {
+    background-color: whitesmoke;
 }

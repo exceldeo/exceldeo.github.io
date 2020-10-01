@@ -2,217 +2,120 @@
 <html lang="en">
 
 <head>
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="ZXing for JS">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>QR or Bar Code scanner</title>
-
-	<link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-		href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-	<link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-		href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
-	<link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-		href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>CV</title>
 </head>
-<<<<<<< HEAD
 
 <body>
-
-	<main class="wrapper" style="padding-top:2em">
-
-		<section class="container" id="demo-content">
-			<h1 class="title">Scan BarCode Or QrCode from Video Camera</h1>
-
-			<!-- <p>
-				<a class="button-small button-outline" href="../../index.html">HOME 🏡</a>
-			</p> -->
-
-			<!-- <p>This example shows how to scan any supported 1D/2D code with ZXing javascript library from the device
-				video
-				camera. If more
-				than one video input devices are available (for example front and back camera) the example shows how to
-				read
-				them and use a select to change the input device.</p> -->
-
-			<!-- <div> -->
-			<!-- <a class="button" id="resetButton">Reset</a> -->
-			<!-- </div> -->
-
-			<div>
-				<video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#"> <b>Ex</b>d </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ml-5">
+						<a class="nav-link" href="#head">Home</a>
+					</li>
+					<li class="nav-item ml-5">
+						<a class="nav-link" href="#main">About Me</a>
+					</li>
+					<li class="nav-item ml-5">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
 			</div>
+		</div>
+	</nav>
 
-			<div id="sourceSelectPanel" style="display:none">
-				<label for="sourceSelect">Change video source:</label>
-				<select id="sourceSelect" style="max-width:400px">
-				</select>
-				<a class="button" id="startButton">Chang B</a>
+	<div class="jumbotron jumbotron-fluid text-center" id="head">
+		<div class="container">
+			<h1 class="display-5"> <span class="txt-type"
+					data-words='["Motivation Quote","\" Work Hard, Pray Hard \""]'></span></h1>
+
+		</div>
+	</div>
+	<main class="container" id="main">
+		<div class="row justify-content-center main">
+			<div class=" col-3">
+				<img src="/assets/img/foto.jpg" width="250px" height="" alt="">
 			</div>
-
-			<label>Result:</label>
-			<pre><code id="result"></code></pre>
-
-			<!-- <p>See the <a href="https://github.com/zxing-js/library/tree/master/docs/examples/multi-camera/">source
-					code</a>
-				for this example.</p> -->
-		</section>
-
-		<footer class="footer">
-			<section class="container">
-				<!-- <p>ZXing TypeScript Demo. Licensed under the <a target="_blank"
-						href="https://github.com/zxing-js/library#license" title="MIT">MIT</a>.</p> -->
-			</section>
-		</footer>
-
+			<div class="col-9">
+				<div class="h2 text-center">
+					About Me
+				</div>
+				<div class="h5">
+					I'm <b>Excel Deo</b> <br>
+					<span class="h6">informatics students</span>
+				</div>
+				<hr>
+				<div class="row mt-3">
+					<div class="col-3 font-weight-bold">
+						Name
+					</div>
+					<div class="col-6">
+						: Excel Deo Cornelius
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3 font-weight-bold">
+						NRP
+					</div>
+					<div class="col-6">
+						: 05111840000117
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3 font-weight-bold">
+						Adress
+					</div>
+					<div class="col-6">
+						: A Yani 157 Nganjuk
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3 font-weight-bold">
+						Email
+					</div>
+					<div class="col-6">
+						: excel.deo99@gmail.com
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
-
-	<script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
-	<script type="text/javascript">
-		window.addEventListener('load', function () {
-			let selectedDeviceId;
-			const codeReader = new ZXing.BrowserMultiFormatReader()
-			console.log('ZXing code reader initialized')
-			codeReader.listVideoInputDevices()
-				.then((videoInputDevices) => {
-					const sourceSelect = document.getElementById('sourceSelect')
-					selectedDeviceId = videoInputDevices[0].deviceId
-					if (videoInputDevices.length >= 1) {
-						videoInputDevices.forEach((element) => {
-							const sourceOption = document.createElement('option')
-							sourceOption.text = element.label
-							sourceOption.value = element.deviceId
-							sourceSelect.appendChild(sourceOption)
-						})
-
-						sourceSelect.onchange = () => {
-							selectedDeviceId = sourceSelect.value;
-						};
-
-						const sourceSelectPanel = document.getElementById('sourceSelectPanel')
-						sourceSelectPanel.style.display = 'block'
-					}
-
-					document.getElementById('startButton').addEventListener('click', () => {
-						codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
-							if (result) {
-								console.log(result)
-								document.getElementById('result').textContent = result.text
-							}
-							if (err && !(err instanceof ZXing.NotFoundException)) {
-								console.error(err)
-								document.getElementById('result').textContent = err
-							}
-						})
-						console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
-					})
-
-					codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
-						if (result) {
-							console.log(result)
-							document.getElementById('result').textContent = result.text
-						}
-						if (err && !(err instanceof ZXing.NotFoundException)) {
-							console.error(err)
-							document.getElementById('result').textContent = err
-						}
-					})
-					console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
-
-
-
-					document.getElementById('resetButton').addEventListener('click', () => {
-						codeReader.reset()
-						document.getElementById('result').textContent = '';
-						console.log('Reset.')
-					})
-
-				})
-				.catch((err) => {
-					console.error(err)
-				})
-		})
+	<div class="container-fluid mt-5" id="contact">
+		<div class="row" style="height: 100px;">
+			<div class="col-12 text-center">
+				<img src="/assets/img/fb.png" height="50px" alt="facebook"> &nbsp; &nbsp;
+				<img src="/assets/img/ig.png" height="50px" alt="instagram">
+			</div>
+		</div>
+		<div class="footer">
+			<p class="text-center">Copyright 2020. ExcelDeo.</p>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="assets/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 	</script>
-
-=======
-<body> 
-    <div class="container">
-        <div class="jumbotron parallax">
-            <div class="card">
-                <div class="color-5">
-                    <img class="image" src="/assets/image/profile.png" alt="profile">
-                        <h1>Excel Deo Cornelius <br> 05111840000117</h1>
-                    <h2>
-                        <div id="clock"></div>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div style="border:1px solid black" class="header-item color-5 bg-color-1">
-               <h2>
-                   About Me
-               </h2> 
-            </div>
-        </div>
-        <div class="container-item">
-            <div class="grid-item">
-                <div class="item">
-                        <div class="header-item bg-color-1 title color-5">
-                            header
-                        </div>
-                    
-                    <div class="body-item">
-                        hello
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="item">
-                    world
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="item">
-                    !!!
-                </div>
-            </div>
-        </div>
-        <div class="parallax-small">
-            <!-- <div class="small"></div> -->
-        </div>
-
-        <div class="card">
-                    <h3 class="title">
-                        find me
-                    </h3>
-            <a href="https://www.instagram.com/exceldeo27/?hl=id" target="_blank" rel="noopener noreferrer" >
-                <img src="/assets/image/instagram.png" alt="instagram" srcset="" width="50px" >
-            </a>
-            <div style="font-size: 20pt;">
-                @exceldeo27
-            </div>
-        </div>
-
-        
-    </div>
-
-
-<script type="text/javascript">
-
-    setInterval(displayclock,1000);
-
-    function displayclock(){
-        var time = new Date();
-        var hrs = time.getHours();
-        var min = time.getMinutes();
-        var sec = time.getSeconds();
-
-        document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
-
-    }
-</script>
->>>>>>> parent of c389be0... CV 100%
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
 </body>
 
 </html>
